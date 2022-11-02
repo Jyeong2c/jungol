@@ -1,23 +1,17 @@
 #include<stdio.h>
-
 int main()
 {
-	int a,i;
-	int sum =0,avg=0;
+    int a, i, sum = 0, avg = 0;
+    for (i = 1; i < 21; i++)
+    {
+        scanf_s("%d", &a);
+        if (a == 0)
+            break;
+        sum += a;
+        avg = sum / i;
+    }
+    printf("%d\n", i);
 
-	
-
-	for (i = 1; i <= 20; i++ ){
-		scanf("%d", &a);
-
-		sum += a;
-	
-		if (a == 0){
-		break;	
-		}
-	}
-	i--;
-	avg = (sum / i);
-	printf("%d %d\n", sum, avg);
-	return 0;
+    printf("%d %d", sum, avg);
+    return 0;
 }
